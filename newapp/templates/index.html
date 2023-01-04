@@ -9,7 +9,17 @@
 </head>
 
 <body>
-    <p>Hello World</p>
+    {% if user.username == "admin" %}
+    <h2>Hello {{user}}</h2>
+    {% endif %}
+
+    {% for val in data %}
+    <ul>
+        <li>{{ val.name }}</li>
+        <li>{{ val.age }}</li>
+        <li>{{ val.mobile }}</li>
+    </ul>
+    {% endfor %}
 </body>
 
 </html>
